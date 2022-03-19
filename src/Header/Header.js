@@ -9,7 +9,7 @@ function Header() {
         <>
             <div className="row Header fixed-top">
                 <nav className="navbar navbar-expand-lg navbar-light px-0 pb-0">
-                    <ul className="col-lg-7 col-sm-6 col-7 mb-0 px-2 px-md-5 header_left_side">
+                    <ul className="col-lg-7 col-sm-6 col-8 mb-0 px-1 px-sm-2 px-md-5 header_left_side">
                         <li className='dropdown_bar_btn'>
                             <Dropdown className='dropdown px-2'>
                                 <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none", padding: "0" }}>
@@ -94,7 +94,7 @@ function Header() {
                             <button type="button" className="btn btn-primary p-1 subscribe_btn_after_md_scrn" style={{ fontSize: "12px" }}><b>SUBSCRIBE</b></button>
                         </li>
                     </ul>
-                    <div className="col-lg-5 col-sm-6 col-5 header_right_side" style={{ textAlign: "right" }}>
+                    <div className="col-lg-5 col-sm-6 col-4 header_right_side" style={{ textAlign: "right" }}>
                         <div className="form__group field" style={{ marginTop: "-20px" }}>
                             <input type="input" className="form__field" placeholder="Search" name="Search" id='Search' required />
                             <button type="button" className="btn btn-primary p-1 subscribe_btn_before_md_scrn" style={{ fontSize: "12px", marginLeft: "10px" }}><b>SUBSCRIBE</b></button>
