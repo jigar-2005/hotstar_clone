@@ -1,0 +1,134 @@
+.navbar{
+  background: #192133;
+}
+.dropdown{
+  margin-left: 10px;
+}
+.dropdown_header_btn{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.dropdown_menu{
+  background: #192133;
+}
+.dropdown-toggle::after {
+    display: none !important; 
+}
+.dropdown:hover {
+    display: block;
+}
+.dropdown_item{
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.dropdown_item:hover{
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background: #0d121f;
+  color: rgba(255, 255, 255, 0.9);
+}
+ul{
+  list-style-type: none;
+}
+li{
+  float: left;
+}
+.header_options{
+  margin-top: 12px;
+}
+.subscribe_btn_after_md_scrn{
+  display: none;
+}
+.form__group {
+  position: relative;
+  margin-top: 10px;
+}
+.form__field::placeholder{
+  color: white;
+}
+@media (max-width: 1199px) {
+  .header_options {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .Header{
+    height: 56px;
+  }
+  .header_logo{
+    height: 30px;
+    width: 115px;
+    margin-top: -15px;
+  }
+  .dropdown_bar_btn{
+    margin-top: -5px;
+  }
+  .subscribe_btn_after_md_scrn{
+    display: block;
+  }
+  .subscribe_btn_before_md_scrn{
+    display: none;
+  }
+  .form__field {
+    width: 70%;
+    border: 0;
+    border-bottom: 1px solid gray;
+    outline: 0;
+    font-size: 18px;
+    color: white;
+    padding: 3px 0;
+    background: transparent;
+  }
+  .header_right_side{
+    padding-right: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .Header{
+    height: 72px;
+  }
+  .header_logo{
+    height: 45px;
+    width: 140px;
+  }
+  .dropdown_bar_btn{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .header_right_side{
+    padding-right: 40px;
+  }
+  .form__field {
+    border: 0;
+    border-bottom: 1px solid gray;
+    outline: 0;
+    font-size: 18px;
+    color: white;
+    padding: 3px 0;
+    background: transparent;
+  }
+}
+@media (max-width: 576px){
+  .header_right_side{
+    padding-right: 20px;
+  }
+  .login_btn{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

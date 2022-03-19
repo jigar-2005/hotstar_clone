@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+    .SearchResult{
+        margin-top: 72px;
+    }
+}
+@media (max-width: 768px) {
+    .SearchResult{
+        margin-top: 56px;
+    }
+}
+@media (max-width: 1600px) {
+    .Single_video_8{
+        display: none;
+    }
+}
+@media (max-width: 1400px) {
+    .Single_video_7{
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .Single_video_6{
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .Single_video_5{
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    .Single_video_4{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .Single_video_3{
+        display: none;
+    }
+}
+
+
