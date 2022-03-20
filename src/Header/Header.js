@@ -24,7 +24,7 @@ function Header() {
                         </li>
                         <li className='px-2 li_tag'>
                             <Link to="/">
-                                <img className='header_logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Disney%2B_Hotstar_logo.svg/640px-Disney%2B_Hotstar_logo.svg.png" alt="#" />
+                                <img className='header_logo' src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="#" />
                             </Link>
                         </li>
                         <li className="header_options li_tag" style={{ marginLeft: "-10px" }}>
