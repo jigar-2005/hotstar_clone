@@ -10,7 +10,7 @@ function Header() {
             <div className="row Header fixed-top">
                 <nav className="navbar navbar-expand-lg navbar-light px-0 pb-0">
                     <ul className="col-lg-7 col-sm-6 col-8 mb-0 px-1 px-sm-2 px-md-5 header_left_side">
-                        <li className='dropdown_bar_btn'>
+                        <li className='dropdown_bar_btn li_tag'>
                             <Dropdown className='dropdown px-2'>
                                 <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none", padding: "0" }}>
                                     <i className="fa fa-bars dropdown_header_btn"></i>
@@ -22,12 +22,12 @@ function Header() {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>
-                        <li className='px-2'>
+                        <li className='px-2 li_tag'>
                             <Link to="/">
                                 <img className='header_logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Disney%2B_Hotstar_logo.svg/640px-Disney%2B_Hotstar_logo.svg.png" alt="#" />
                             </Link>
                         </li>
-                        <li className="header_options" style={{ marginLeft: "-10px" }}>
+                        <li className="header_options li_tag" style={{ marginLeft: "-10px" }}>
                             <Dropdown className='dropdown'>
                                 <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none" }}>
                                     <p className="dropdown_header_btn">TV</p>
@@ -45,7 +45,7 @@ function Header() {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>
-                        <li className="header_options">
+                        <li className="header_options li_tag">
                             <Dropdown className='dropdown'>
                                 <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none" }}>
                                     <p className="dropdown_header_btn">Movies</p>
@@ -62,7 +62,7 @@ function Header() {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>
-                        <li className="header_options">
+                        <li className="header_options li_tag">
                             <Dropdown className='dropdown'>
                                 <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none" }}>
                                     <p className="dropdown_header_btn">Sports</p>
@@ -84,10 +84,10 @@ function Header() {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>
-                        <li className="header_options">
+                        <li className="header_options li_tag">
                             <p className="dropdown_header_btn" style={{ marginLeft: "22px", marginTop: "6px" }}>Disney+</p>
                         </li>
-                        <li className="header_options">
+                        <li className="header_options li_tag">
                             <img src="https://www.hotstar.com/assets/4aa70ede8904e16b7630300c09219c8e.svg" alt="#" style={{ marginLeft: "22px", marginTop: "12px" }} />
                         </li>
                         <li>
@@ -98,7 +98,7 @@ function Header() {
                         <div className="form__group field" style={{ marginTop: "-20px" }}>
                             <input type="input" className="form__field" placeholder="Search" name="Search" id='Search' required />
                             <button type="button" className="btn btn-primary p-1 subscribe_btn_before_md_scrn" style={{ fontSize: "12px", marginLeft: "10px" }}><b>SUBSCRIBE</b></button>
-                            <Link to="/" style={{ textDecoration: 'none', color: "white", paddingLeft: "15px" }} className="login_btn"><b>LOGIN</b></Link>
+                            <Link to="/" style={{ textDecoration: 'none', color: "white", paddingLeft: "10px" }} className="login_btn"><b>LOGIN</b></Link>
                         </div>
                     </div>
                 </nav>

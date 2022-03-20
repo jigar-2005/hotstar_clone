@@ -1,3 +1,36 @@
+.video_thumbnail {
+  position: relative;
+  transition: transform 500ms;
+}
+.zoom_on_hover .video_thumbnail:focus,
+.zoom_on_hover .video_thumbnail:hover {
+  transform: scale(1.15);
+  z-index: 1;
+}
+.video_thumbnail{
+  position: relative;
+  float: left;
+}
+.video_thumbnail .video_description{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgb(19, 49, 78);
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.video_thumbnail:hover{
+  cursor: pointer;
+}
+.video_thumbnail:hover .video_description{
+  visibility: visible;
+  opacity: 0.7; 
+  border-radius: 10px;
+}
 .carousel_item{
     border-radius: 10px;
 }

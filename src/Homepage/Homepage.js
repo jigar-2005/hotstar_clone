@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../Header/Header';
 import PopularShows from '../AllVideoCategory/PopularShows/PopularShows';
 import LatestAndTrending from '../AllVideoCategory/LatestAndTrending/LatestAndTrending';
 import MoviesRecommended from '../AllVideoCategory/MoviesRecommended/MoviesRecommended';
@@ -8,18 +7,11 @@ import MoviesRecommended from '../AllVideoCategory/MoviesRecommended/MoviesRecom
 function Homepage() {
     return (
         <>
-            <Header />
-            <div className="container-fluid">
+            <div className="container-fluid mb-5">
                 <div className='AllCategoryVideo px-3'>
-                    <div className='mb-3'>
-                        <LatestAndTrending />
-                    </div>
-                    <div className='mb-3'>
-                        <PopularShows />
-                    </div>
-                    <div className='mb-3'>
-                        <MoviesRecommended />
-                    </div>
+                    <LatestAndTrending />
+                    <PopularShows />
+                    <MoviesRecommended />
                 </div>
             </div>
         </>
