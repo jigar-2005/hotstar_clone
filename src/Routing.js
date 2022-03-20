@@ -25,15 +25,17 @@ function Routing() {
                     </div>
                 </Route> */}
                 <Route exact path="/search_result">
-                    <div>
                         <Header />
+                    <div style={{ backgroundColor: "#192133" }}>
                         <SearchResult />
+                        <Footer />
                     </div>
                 </Route>
                 <Route exact path="/single_category">
-                    <div>
                         <Header />
+                    <div style={{ backgroundColor: "#192133" }}>
                         <SingleCategoryVideo />
+                        <Footer />
                     </div>
                 </Route>
             </Router>
