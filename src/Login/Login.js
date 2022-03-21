@@ -12,8 +12,8 @@ function Login() {
                     <h1 className='text-center mb-5'><b><u>Login</u></b></h1>
                     <form className='text-center'>
                         <h5 style={{ textAlign: "left" }}>Mobile Number</h5>
-                        <input type="tel" className='px-3' name="phone_number" id="phone_number" required pattern="(?=.*\d).{8,}" maxLength="10" style={{ width: "100%", fontSize: "18px" }} autoComplete="off" />
-                        <button class="btn btn-primary w-100 mt-3" type="submit">Button</button>
+                        <input type="text" className='px-3' name="phone_number" id="phone_number" required pattern="(?=.*\d).{10,}" minLength="10" maxLength="10" style={{ width: "100%", fontSize: "18px" }} autoComplete="off" />
+                        <button class="btn btn-primary w-100 mt-3" type="submit">Login</button>
                     </form>
                 </div>
             </div>
