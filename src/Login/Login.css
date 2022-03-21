@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+    .Login{
+        margin-top: 100px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .Login{
+        margin-top: 65px;
+    }
+}
