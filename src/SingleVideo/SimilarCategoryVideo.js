@@ -29,7 +29,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1x/sources/r1/cms/prod/4378/1124378-v-fd102213bb26" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -43,7 +43,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2733/1122733-v-5df3bdae2d7a" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -57,7 +57,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6179/1116179-v-ea8bc79afc48" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -71,7 +71,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1919/1111919-v-f73a6f4d8b98" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -85,7 +85,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9896/1109896-v-e064824cd9fd" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -99,7 +99,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6716/1106716-v-a0a306c60795" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -113,7 +113,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1545/1101545-v-3125e1756af8" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -131,7 +131,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8812/1148812-v-93639980824a" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -145,7 +145,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1x/sources/r1/cms/prod/4378/1124378-v-fd102213bb26" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -159,7 +159,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2733/1122733-v-5df3bdae2d7a" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -173,7 +173,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6179/1116179-v-ea8bc79afc48" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -187,7 +187,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1919/1111919-v-f73a6f4d8b98" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -201,7 +201,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9896/1109896-v-e064824cd9fd" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -215,7 +215,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6716/1106716-v-a0a306c60795" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -229,7 +229,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1545/1101545-v-3125e1756af8" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -247,7 +247,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8812/1148812-v-93639980824a" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -261,7 +261,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1x/sources/r1/cms/prod/4378/1124378-v-fd102213bb26" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -275,7 +275,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2733/1122733-v-5df3bdae2d7a" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -289,7 +289,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6179/1116179-v-ea8bc79afc48" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -303,7 +303,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1919/1111919-v-f73a6f4d8b98" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -317,7 +317,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9896/1109896-v-e064824cd9fd" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -331,7 +331,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6716/1106716-v-a0a306c60795" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />
@@ -345,7 +345,7 @@ function SimilarCategoryVideo() {
                                 <Link to="/">
                                     <div className="similar_category_video_thumbnail">
                                         <img className="d-block w-100 carousel_item" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1545/1101545-v-3125e1756af8" alt="#" style={{ height: "275px" }} />
-                                        <div className='w-100 px-2 video_description'>
+                                        <div className='w-100 px-2 similar_category_video_description'>
                                             <h6>Turning Red</h6>
                                             <p style={{ fontSize: "10px", marginTop: "-5px" }}>1 hr 39 min * 2022 Mei Lee, a confident, dorky 13-year-old, tries to balance friends, family, the chaos of adolescence and an uncontrollable ability to poof into a giant red panda.</p>
                                             <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</Link><br />

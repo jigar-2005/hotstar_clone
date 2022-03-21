@@ -2,8 +2,8 @@
     position: relative;
     transition: transform 500ms;
 }
-.similar_category_ .similar_category_video_thumbnail:focus,
-.similar_category_ .similar_category_video_thumbnail:hover {
+.similar_category_zoom_on_hover .similar_category_video_thumbnail:focus,
+.similar_category_zoom_on_hover .similar_category_video_thumbnail:hover {
     transform: scale(1.17);
     z-index: 1;
 }
