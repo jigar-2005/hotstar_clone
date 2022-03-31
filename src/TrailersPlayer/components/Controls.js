@@ -152,11 +152,6 @@ const Controls = forwardRef(
             justify="space-between"
             style={{ padding: 16 }}
           >
-            <Grid item>
-              <Typography variant="h5" style={{ color: "#fff" }}>
-                {movie_title}
-              </Typography>
-            </Grid>
           </Grid>
           <Grid container direction="row" alignItems="center" justify="center">
             <IconButton

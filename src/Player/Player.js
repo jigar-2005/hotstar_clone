@@ -1,9 +1,13 @@
-import React, { useState, useRef } from "react";
-import Container from "@material-ui/core/Container";
+import React, { useState, useRef, useEffect } from "react";
+import { useParams } from 'react-router-dom'
 import ReactPlayer from "react-player";
 import { makeStyles } from "@material-ui/core/styles";
 import screenful from "screenfull";
 import Controls from "./components/Controls";
+import Footer from "../Footer/Footer";
+import Trailers from "../SingleVideo/Trailers";
+import { useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux"
 
 const useStyles = makeStyles((theme) => ({
   playerWrapper: {
@@ -86,7 +90,34 @@ const format = (seconds) => {
 
 let count = 0;
 
-function Player() {
+function Player(props) {
+  const history = useHistory()
+  const gettingUserDetails = useSelector((state) => state.Commands.LoginDetails);
+  {
+      useEffect(() => {
+          if (gettingUserDetails.length===0) {
+              history.push("/login")
+          }
+      })
+  }
+
+  const { single_video_id } = useParams();
+  const [TrailersData, setTrailersData] = useState([])
+  const [SingleVideoDetails, setSingleVideoDetails] = useState([])
+  const [loading, setloading] = useState(false)
+  useEffect(() => {
+    fetch(`${props.BaseUrl}/single_videos/${single_video_id}`).then((result) => {
+      result.json().then((resp) => {
+        setSingleVideoDetails(resp)
+        setTrailersData(resp)
+        setloading(true)
+      })
+    })
+  }, [])
+
+
+
+
   const classes = useStyles();
   const [timeDisplayFormat, setTimeDisplayFormat] = React.useState("normal");
   const [state, setState] = useState({
@@ -216,69 +247,98 @@ function Player() {
 
   const totalDuration = format(duration);
 
+
   return (
     <>
-      <Container maxWidth="md">
-        <div
-          onMouseMove={handleMouseMove}
-          onMouseLeave={hanldeMouseLeave}
-          ref={playerContainerRef}
-          className={classes.playerWrapper}
-        >
-          <ReactPlayer
-            ref={playerRef}
-            width="100%"
-            height="100%"
-            url="https://buddy9.com//uploads//movie//Iron-Man//fullhd//master.m3u8"
-            pip={pip}
-            playing={playing}
-            controls={false}
-            light={light}
-            loop={loop}
-            playbackRate={playbackRate}
-            volume={volume}
-            muted={muted}
-            onProgress={handleProgress}
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-            }}
-          />
+      {loading ?
+        <>
+          {
+            SingleVideoDetails.map((SingleVideoDetails, i) =>
+              <div className='SingleVideo text-light'>
+                <div className="px-5">
+                  <div
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={hanldeMouseLeave}
+                    ref={playerContainerRef}
+                    className={classes.playerWrapper}
+                  >
+                    <ReactPlayer
+                      ref={playerRef}
+                      width="100%"
+                      height="100%"
+                      url={SingleVideoDetails.movie_src}
+                      pip={pip}
+                      playing={playing}
+                      controls={false}
+                      light={light}
+                      loop={loop}
+                      playbackRate={playbackRate}
+                      volume={volume}
+                      muted={muted}
+                      onProgress={handleProgress}
+                      config={{
+                        file: {
+                          attributes: {
+                            crossorigin: "anonymous",
+                          },
+                        },
+                      }}
+                    />
 
-          <Controls
-            ref={controlsRef}
-            onSeek={handleSeekChange}
-            onSeekMouseDown={handleSeekMouseDown}
-            onSeekMouseUp={handleSeekMouseUp}
-            onDuration={handleDuration}
-            onRewind={handleRewind}
-            onPlayPause={handlePlayPause}
-            onFastForward={handleFastForward}
-            playing={playing}
-            played={played}
-            elapsedTime={elapsedTime}
-            totalDuration={totalDuration}
-            onMute={hanldeMute}
-            muted={muted}
-            onVolumeChange={handleVolumeChange}
-            onVolumeSeekDown={handleVolumeSeekDown}
-            onChangeDispayFormat={handleDisplayFormat}
-            playbackRate={playbackRate}
-            onPlaybackRateChange={handlePlaybackRate}
-            onToggleFullScreen={toggleFullScreen}
-            volume={volume}
-          />
-        </div>
+                    <Controls movie_title={SingleVideoDetails.movie_title}
+                      ref={controlsRef}
+                      onSeek={handleSeekChange}
+                      onSeekMouseDown={handleSeekMouseDown}
+                      onSeekMouseUp={handleSeekMouseUp}
+                      onDuration={handleDuration}
+                      onRewind={handleRewind}
+                      onPlayPause={handlePlayPause}
+                      onFastForward={handleFastForward}
+                      playing={playing}
+                      played={played}
+                      elapsedTime={elapsedTime}
+                      totalDuration={totalDuration}
+                      onMute={hanldeMute}
+                      muted={muted}
+                      onVolumeChange={handleVolumeChange}
+                      onVolumeSeekDown={handleVolumeSeekDown}
+                      onChangeDispayFormat={handleDisplayFormat}
+                      playbackRate={playbackRate}
+                      onPlaybackRateChange={handlePlaybackRate}
+                      onToggleFullScreen={toggleFullScreen}
+                      volume={volume}
+                    />
+                  </div>
 
-        <canvas ref={canvasRef} />
-      </Container>
+                  <canvas ref={canvasRef} />
+                </div>
+                <h3 className="text-white px-5" style={{marginTop:"-150px"}}>{SingleVideoDetails.movie_title}</h3>
+                <h5 className="text-white px-5" >{SingleVideoDetails.movie_released} * <span className="text-primary">{SingleVideoDetails.movie_tags}</span></h5>
+                <h5 className="text-white px-5" >{SingleVideoDetails.movie_description}</h5>
+                <div>
+                <Trailers TrailersData={TrailersData} />
+                </div>
+              </div>
+
+            )
+          }
+          <Footer />
+        </>
+        :
+        <>
+          <div style={{ height: "100vh", overflow: 'hidden' }}>
+            <div class="loading_spinner">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div className="fixed-bottom">
+              <Footer />
+            </div>
+          </div>
+        </>
+      }
     </>
   );
 }
-
 export default Player;
-
-

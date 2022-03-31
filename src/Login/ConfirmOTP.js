@@ -5,9 +5,11 @@ import Footer from '../Footer/Footer';
 import { useHistory } from 'react-router-dom'
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import { LoginDetailsSave } from "../actions/index"
 
 
-function Login(props) {
+function ConfirmOTP(props) {
+
     const Alert = React.forwardRef(function Alert(props, ref) {
         return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
     });
@@ -28,7 +30,7 @@ function Login(props) {
         }
 
         setOpen(false);
-        history.push("./confirm_otp")
+        history.push("/")
     };
 
     const handleErrorClose = (event, reason) => {
@@ -47,11 +49,12 @@ function Login(props) {
             }
         })
     }
-    const [LoginMobileNumber, setLoginMobileNumber] = useState("")
-    async function LoginSubmitForm(e) {
+    const dispatch = useDispatch();
+    const [generatedOTP, setgeneratedOTP] = useState("")
+    async function FormSubmitConfirmOTP(e) {
         e.preventDefault()
-        let data = { LoginMobileNumber }
-        let result = await fetch(`${props.BaseUrl}/login_process`, {
+        let data = { generatedOTP }
+        let result = await fetch(`${props.BaseUrl}/confirm_otp_process`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -60,7 +63,8 @@ function Login(props) {
             }
         })
         result = await result.json()
-        if (result.info === "success") {
+        if (result.info === "success"){
+            dispatch(LoginDetailsSave(result.UserDetail[0], result.UserDetail[1], result.UserDetail[2], result.UserDetail[3]))
             handleClick()
         } else {
             seterrorMessage(result.info)
@@ -79,13 +83,10 @@ function Login(props) {
                     <div className="text-center mb-2">
                         <img src="https://www.iamherelearning.com/wp-content/uploads/2020/02/Movie-Icon-1-460x406.png" alt="#" style={{ width: "250px", height: "200px" }} />
                     </div>
-                    <form className='text-center p-5' onSubmit={LoginSubmitForm} style={{ background: "#192133", borderRadius: "10px" }}>
-                        <h5 style={{ textAlign: "left" }}><b>Mobile Number</b></h5>
-                        <div>
-                            <span style={{ position: "absolute", marginLeft: "5px", marginTop: "1px", color: "black", fontSize: "18px" }}>+91 </span>
-                            <input type="text" name="MobileNumber" value={LoginMobileNumber} onChange={(e) => setLoginMobileNumber(e.target.value)} required pattern="(?=.*\d).{10,}" minLength="10" maxLength="10" style={{ width: "100%", fontSize: "18px", paddingLeft: "45px" }} autoComplete="off" autoFocus />
-                        </div>
-                        <button className="btn btn-primary w-100 mt-3" type="submit">Login</button>
+                    <form className='text-center p-5' onSubmit={FormSubmitConfirmOTP} style={{ background: "#192133", borderRadius: "10px" }}>
+                        <h5 style={{ textAlign: "left" }}>Confirm OTP</h5>
+                        <input type="text" className='px-2' name="generatedOTP" value={generatedOTP} onChange={(e) => setgeneratedOTP(e.target.value)} required style={{ width: "100%", fontSize: "18px" }} autoComplete="off" autoFocus />
+                        <button className="btn btn-primary w-100 mt-3" type="submit">Confirm</button>
                     </form>
                 </div>
             </div>
@@ -94,7 +95,7 @@ function Login(props) {
             </div>
             <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                    OTP Send to your Mobile number
+                    Login Successfully
                 </Alert>
             </Snackbar>
             <Snackbar open={ErrorOpen} autoHideDuration={1500} onClose={handleErrorClose}>
@@ -105,4 +106,9 @@ function Login(props) {
         </>
     );
 }
-export default Login;
+
+export default ConfirmOTP;
+
+
+
+

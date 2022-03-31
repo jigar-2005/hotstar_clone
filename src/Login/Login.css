@@ -1,12 +1,51 @@
 @media (min-width: 768px) {
+  .Login{
+      margin-top: 80px;
+  }
+}
+@media (min-width: 992px) {
     .Login{
-        margin-top: 100px;
         padding-left: 30%;
         padding-right: 30%;
     }
 }
-@media (max-width: 768px) {
-    .Login{
-        margin-top: 65px;
-    }
+@media (max-width: 991px) {
+  .Login{
+      padding-left: 20%;
+      padding-right: 20%;
+  }
 }
+@media (max-width: 768px) {
+  .Login{
+      margin-top: 65px;
+      padding-left: 0;
+      padding-right: 0;
+  }
+}
+.background_image {
+  background-image: url("https://wallpaperaccess.com/full/3658597.jpg");
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Login {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+
+
+
+
+
+

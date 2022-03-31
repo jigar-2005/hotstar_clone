@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import './SingleCategoryVideo.css'
+import './MovieCategory.css'
 import { Link, useParams } from 'react-router-dom'
 import Footer from '../Footer/Footer';
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 
 
-function SingleCategoryVideo(props) {
+function MovieCategoryVideo(props) {
     const history = useHistory()
     const gettingUserDetails = useSelector((state) => state.Commands.LoginDetails);
     {
         useEffect(() => {
-            if (gettingUserDetails.length===0) {
+            if (gettingUserDetails.length === 0) {
                 history.push("/login")
             }
         })
     }
 
-    const { category_id } = useParams();
     const [AllItemOfSingleCategory, setAllItemOfSingleCategory] = useState([])
     const [loading, setloading] = useState(false)
     useEffect(() => {
-        fetch(`${props.BaseUrl}/single_category_videos/${category_id}`).then((result) => {
+        fetch(`http://127.0.0.1:5000/movie_category_videos/${props.page}`).then((result) => {
             result.json().then((resp) => {
                 setAllItemOfSingleCategory(resp)
                 setloading(true)
@@ -34,18 +33,17 @@ function SingleCategoryVideo(props) {
         <>
             {loading ?
                 <>
-                    <div className='SingleCategoryVideo pt-4 mb-5'>
-                        <h5 className='text-light px-5'>Popular Shows</h5>
+                    <div className='MovieCategoryVideo pt-4 mb-5 px-lg-4'>
+                        <h5 className='text-light px-5'>{props.page} Category</h5>
                         <div className="container-fluid px-sm-5">
                             <div className="row hover_effect_on_hover">
                                 {
                                     AllItemOfSingleCategory.map((AllItemOfSingleCategory, i) =>
-                                        <div className="col-6 col-md-4 col-lg-3 col-xxl-2">
-                                            {/* <Link to={`/single_video/5`}> */}
+                                        <div className="col-6 col-md-4 col-lg-3 col-xxl-2 px-lg-4">
                                             <Link to={`/single_video/${AllItemOfSingleCategory.movie_id}`}>
-                                                <div className="Similar_category_video_thumbnail_hover_effect similar_category_video_thumbnail">
-                                                    <img src={AllItemOfSingleCategory.movie_cover_image} alt="#" style={{ height: "275px", width: "100%", marginTop: "10px", borderRadius: "10px" }} />
-                                                    <div className='w-100 px-2 Similar_category_video_description_hover_effect'>
+                                                <div className="movie_category_video_thumbnail_hover_effect movie_category_video_thumbnail w-100">
+                                                    <img src={AllItemOfSingleCategory.movie_cover_image} alt="#" style={{ height: "300px", width: "100%", marginTop: "20px", borderRadius: "10px" }} />
+                                                    <div className='w-100 px-2 movie_category_video_description_hover_effect'>
                                                         <h6>{AllItemOfSingleCategory.movie_title}</h6>
                                                         <p style={{ fontSize: "10px", marginTop: "-5px" }}>{AllItemOfSingleCategory.movie_released} * {AllItemOfSingleCategory.movie_description}</p>
                                                         <h6 style={{ color: "white", fontSize: "10px" }}><i className="fa fa-play"></i> WATCH MOVIE</h6><br />
@@ -77,7 +75,7 @@ function SingleCategoryVideo(props) {
         </>
     );
 }
-export default SingleCategoryVideo;
+export default MovieCategoryVideo;
 
 
 

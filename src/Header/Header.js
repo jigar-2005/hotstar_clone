@@ -1,104 +1,96 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Header.css"
 import { Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux"
+import { LogoutUser } from '../actions';
 
 
-function Header() {
+function Header(props) {
+
+    const dispatch = useDispatch();
+    const history = useHistory()
+    const [SearchWord, setSearchWord] = useState("")
+    const gettingUserDetails = useSelector((state) => state.Commands.LoginDetails);
+
+    async function check_user_login_in_one_device_or_not() {
+        let UserMobileNumber = gettingUserDetails[0]['MobileNumber']
+        let UserLoginToken = gettingUserDetails[0]['login_token']
+        let data = { UserMobileNumber, UserLoginToken }
+        let result = await fetch(`${props.BaseUrl}/check_user_login_in_one_device_or_not`, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        })
+        result = await result.json()
+        if (result.output === "yes") {
+            dispatch(LogoutUser())
+            history.push("./")
+        }
+    }
+
+    async function onSearchFormSubmit(e) {
+        e.preventDefault()
+        fetch(`${props.BaseUrl}/search_word/${SearchWord}`).then((result) => {
+            result.json().then((resp) => {
+                history.push({ pathname: '/search_result', SearchData: resp, SearchWord: SearchWord })
+            })
+        })
+    }
+
+    {
+        useEffect(() => {
+            check_user_login_in_one_device_or_not()
+        })
+    }
+
     return (
         <>
-            <div className="row Header fixed-top">
-                <nav className="navbar navbar-expand-lg navbar-light px-0 pb-0">
-                    <ul className="col-lg-7 col-sm-6 col-8 mb-0 px-1 px-sm-2 px-md-5 header_left_side">
-                        <li className='dropdown_bar_btn li_tag'>
-                            <Dropdown className='dropdown px-2'>
-                                <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none", padding: "0" }}>
-                                    <i className="fa fa-bars dropdown_header_btn"></i>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className='dropdown_menu'>
-                                    <Link to="/" className='dropdown_item'>Channels</Link>
-                                    <Link to="/" className='dropdown_item'>Languages</Link>
-                                    <Link to="/" className='dropdown_item'>Genres</Link>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </li>
-                        <li className='px-2 li_tag'>
-                            <Link to="/">
-                                <img className='header_logo' src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="#" />
-                            </Link>
-                        </li>
-                        <li className="header_options li_tag" style={{ marginLeft: "-10px" }}>
-                            <Dropdown className='dropdown'>
-                                <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none" }}>
-                                    <p className="dropdown_header_btn">TV</p>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className='dropdown_menu'>
-                                    <Link to="/" className='dropdown_item'>Other Shows</Link>
-                                    <Link to="/" className='dropdown_item'>Hotstar Specials</Link>
-                                    <Link to="/" className='dropdown_item'>Quix</Link>
-                                    <Link to="/" className='dropdown_item'>Star Jalsha</Link>
-                                    <Link to="/" className='dropdown_item'>StarPlus</Link>
-                                    <Link to="/" className='dropdown_item'>Star Vijay</Link>
-                                    <Link to="/" className='dropdown_item'>Star Bharat</Link>
-                                    <Link to="/" className='dropdown_item'>Asianet</Link>
-                                    <Link to="/" className='dropdown_item'>more...</Link>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </li>
-                        <li className="header_options li_tag">
-                            <Dropdown className='dropdown'>
-                                <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none" }}>
-                                    <p className="dropdown_header_btn">Movies</p>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className='dropdown_menu'>
-                                    <Link to="/" className='dropdown_item'>Hindi</Link>
-                                    <Link to="/" className='dropdown_item'>Bengali</Link>
-                                    <Link to="/" className='dropdown_item'>Telugu</Link>
-                                    <Link to="/" className='dropdown_item'>Malayalam</Link>
-                                    <Link to="/" className='dropdown_item'>Tamil</Link>
-                                    <Link to="/" className='dropdown_item'>Marathi</Link>
-                                    <Link to="/" className='dropdown_item'>English</Link>
-                                    <Link to="/" className='dropdown_item'>Kannada</Link>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </li>
-                        <li className="header_options li_tag">
-                            <Dropdown className='dropdown'>
-                                <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none" }}>
-                                    <p className="dropdown_header_btn">Sports</p>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className='dropdown_menu'>
-                                    <Link to="/" className='dropdown_item'>Cricket</Link>
-                                    <Link to="/" className='dropdown_item'>Football</Link>
-                                    <Link to="/" className='dropdown_item'>Kabaddi</Link>
-                                    <Link to="/" className='dropdown_item'>Hockey</Link>
-                                    <Link to="/" className='dropdown_item'>Formula E</Link>
-                                    <Link to="/" className='dropdown_item'>Tennis</Link>
-                                    <Link to="/" className='dropdown_item'>American Football</Link>
-                                    <Link to="/" className='dropdown_item'>Formula 1</Link>
-                                    <Link to="/" className='dropdown_item'>Martial Arts</Link>
-                                    <Link to="/" className='dropdown_item'>Athletics</Link>
-                                    <Link to="/" className='dropdown_item'>Golf</Link>
-                                    <Link to="/" className='dropdown_item'>Table Tennis</Link>
-                                    <Link to="/" className='dropdown_item'>Khelo India</Link>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </li>
-                        <li className="header_options li_tag">
-                            <p className="dropdown_header_btn" style={{ marginLeft: "22px", marginTop: "6px" }}>Disney+</p>
-                        </li>
-                        <li className="header_options li_tag">
-                            <img src="https://www.hotstar.com/assets/4aa70ede8904e16b7630300c09219c8e.svg" alt="#" style={{ marginLeft: "22px", marginTop: "12px" }} />
-                        </li>
-                        <li>
-                            <button type="button" className="btn btn-primary p-1 subscribe_btn_after_md_scrn" style={{ fontSize: "12px" }}><b>SUBSCRIBE</b></button>
-                        </li>
-                    </ul>
-                    <div className="col-lg-5 col-sm-6 col-4 header_right_side" style={{ textAlign: "right" }}>
-                        <div className="form__group field" style={{ marginTop: "-20px" }}>
-                            <input type="input" className="form__field" placeholder="Search" name="Search" id='Search' required />
-                            <button type="button" className="btn btn-primary p-1 subscribe_btn_before_md_scrn" style={{ fontSize: "12px", marginLeft: "10px" }}><b>SUBSCRIBE</b></button>
-                            <Link to="/" style={{ textDecoration: 'none', color: "white", paddingLeft: "10px" }} className="login_btn"><b>LOGIN</b></Link>
+            <div className='fixed-top Header'>
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <ul className='header_left_sidebar_before_md_srcn mt-3'>
+                        <Link to="/" style={{textDecoration:"none", color:"white", fontSize:"22px"}}><b>Home</b></Link>
+                            <li className="header_left_options">
+                                <Link to="/movie_category/Hindi" style={{ textDecoration: "none", color: "white", fontSize: "18px", marginLeft: "7px", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px" }}>Hindi</Link>
+                            </li>
+                            <li className="header_left_options">
+                                <Link to="/movie_category/Dubbed" style={{ textDecoration: "none", color: "white", fontSize: "18px", marginLeft: "7px", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px" }}>Dubbed</Link>
+                            </li>
+                            <li className="header_left_options">
+                                <Link to="/movie_category/WebSeries" style={{ textDecoration: "none", color: "white", fontSize: "18px", marginLeft: "7px", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px" }}>Web Series</Link>
+                            </li>
+                        </ul>
+                        <ul className='header_left_sidebar_after_md_srcn mt-3'>
+                            <li className='dropdown_bar_btn header_left_options'>
+                                <Dropdown className='dropdown'>
+                                    <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ background: "transparent", border: "none", padding: "0" }}>
+                                        <i className="fa fa-bars dropdown_header_btn"></i>
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu className='dropdown_menu'>
+                                        <Link to="/movie_category/Hindi" className='dropdown_item'>Hindi</Link>
+                                        <Link to="/movie_category/Dubbed" className='dropdown_item'>Dubbed</Link>
+                                        <Link to="/movie_category/WebSeries" className='dropdown_item'>Web Series</Link>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </li>
+                        </ul>
+                        <div class="d-flex px-4">
+                            <div className="header_right_side" style={{ textAlign: "right" }}>
+                                <div className="form__group field">
+                                    <form onSubmit={onSearchFormSubmit} style={{ display: "inline" }}>
+                                        <input type="input" className="form__field" placeholder="Search" name="Search" id='Search' required autoComplete='off' value={SearchWord} onChange={(e) => setSearchWord(e.target.value)} />
+                                    </form>
+                                    {gettingUserDetails.length !== 0 ?
+                                        <Link to="/login" style={{ textDecoration: 'none', color: "white", paddingLeft: "10px" }} onClick={() => (dispatch(LogoutUser()))}><b>Logout</b></Link>
+                                        :
+                                        <Link to="/login" style={{ textDecoration: 'none', color: "white", paddingLeft: "10px" }} className="login_btn"><b>LOGIN</b></Link>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
