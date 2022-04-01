@@ -14,7 +14,7 @@ import MovieCategoryVideo from './MovieCategory/MovieCategory';
 
 
 function Routing() {
-    const BASEURL = "https://178.237.56.73:5000"
+    const BASEURL = "http://178.237.56.73:5000"
     return (
         <div style={{ overflowX: "hidden" }}>
             <Router>
